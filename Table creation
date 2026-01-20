@@ -20,3 +20,5 @@ insert into st_info values (103, 'thor', 59, 86, 76, null, null);
 insert into st_info values (103, 'sarang', 57, 74, 78, null, null);
 insert into st_info values (104, 'shreyas', 57, 74, 78, null, null);
 insert into st_info values (105, 'prash', 77, 67, 69, null, null);
+insert into st_info values (106, 'parth', 55, 66, 77, null, null);
+insert into st_info values (107, 'shivam', 77, 34, 88, null, null);
