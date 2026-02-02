@@ -1,0 +1,24 @@
+to create sequence:
+create sequence st_sq start with 1011 increment by 1;
+insert into st_info (prn, name, m1, m2, m3) values (st_sq.nextval, 'xa1011', 12, 13, 15);
+
+create sequence emp_sq start with 1011 increment by 1;
+insert into st_info (prn, name, m1, m2, m3) values (st_sq.nextval, 'xa1', 12, 13, 15);
+
+create table emp (emp_id int primary key, name varchar2(20));
+
+insert into emp values (emp_sq.nextval, 'x1');
+insert into emp values (emp_sq.nextval, 'x2');
+insert into emp values (emp_sq.nextval, 'x3');
+insert into emp values (emp_sq.nextval, 'x4');
+insert into emp values (emp_sq.nextval, 'x5');
+insert into emp values (emp_sq.nextval, 'x6');
+insert into emp values (emp_sq.nextval, 'x7');
+insert into emp values (emp_sq.nextval, 'x8');
+insert into emp values (emp_sq.nextval, 'x9');
+
+
+
+
+to add field to emp:
+alter table emp add mobile number;
