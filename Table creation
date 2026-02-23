@@ -7,8 +7,9 @@ desc st_info; #st_info is the table whos structures will be displayed
 3. insert data in the table
 insert into st_info (250, 'rugved', 65, 75, 85);
 insert into st_info values (250, 'rugved', 65, 75, 85);
-
 insert into st_info values (102, 'hrishi', 54, 86, 86);
+
+select * from st_information;  #show the content of the table.
 
 4. add column to st_info
 alter table st_info add total number;
@@ -17,8 +18,12 @@ alter table st_info add perc number;
 insert into st_info values (103, 'cap', 59, 86, 76);
 insert into st_info values (103, 'thor', 59, 86, 76, null, null);
 
+select * from st_information;
+
 insert into st_info values (103, 'sarang', 57, 74, 78, null, null);
 insert into st_info values (104, 'shreyas', 57, 74, 78, null, null);
 insert into st_info values (105, 'prash', 77, 67, 69, null, null);
 insert into st_info values (106, 'parth', 55, 66, 77, null, null);
 insert into st_info values (107, 'shivam', 77, 34, 88, null, null);
+
+select * from st_information;
