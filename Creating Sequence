@@ -1,14 +1,9 @@
 to create sequence:
-create sequence st_sq start with 1011 increment by 1;
-insert into st_info (prn, name, m1, m2, m3) values (st_sq.nextval, 'xa1011', 12, 13, 15);
-
-create sequence emp_sq start with 1011 increment by 1;
-insert into st_info (prn, name, m1, m2, m3) values (st_sq.nextval, 'xa1', 12, 13, 15);
-
+create sequence st_sq start with 1 increment by 1 ;
+create sequence emp_sq start with 1 increment by 1 ;
 create table emp (emp_id int primary key, name varchar2(20));
 
-insert into emp values (emp_sq.nextval, 'x1');
-insert into emp values (emp_sq.nextval, 'x2');
+to insert: 
 insert into emp values (emp_sq.nextval, 'x3');
 insert into emp values (emp_sq.nextval, 'x4');
 insert into emp values (emp_sq.nextval, 'x5');
@@ -17,8 +12,61 @@ insert into emp values (emp_sq.nextval, 'x7');
 insert into emp values (emp_sq.nextval, 'x8');
 insert into emp values (emp_sq.nextval, 'x9');
 
-
-
+select * from tab;
 
 to add field to emp:
 alter table emp add mobile number;
+
+insert into emp (emp_id, name, mobile) values (emp_sq.nextval, 'abc', 9456687534); 
+insert into emp (emp_id, name, mobile) values (emp_sq.nextval, 'arc', 9456347984); 
+insert into emp (emp_id, name, mobile) values (emp_sq.nextval, 'erc', 9456347344); 
+insert into emp (emp_id, name, mobile) values (emp_sq.nextval, 'tyv', 9456346544); 
+insert into emp (emp_id, name, mobile) values (emp_sq.nextval, 'bnv', 9456376544); 
+insert into emp (emp_id, name, mobile) values (emp_sq.nextval, 'cds', 9456334567); 
+insert into emp (emp_id, name, mobile) values (emp_sq.nextval, 'edc', 1234547534); 
+insert into emp (emp_id, name, mobile) values (emp_sq.nextval, 'tgb', 9678907534); 
+insert into emp (emp_id, name, mobile) values (emp_sq.nextval, 'ijb', 9434567894); 
+insert into emp (emp_id, name, mobile) values (emp_sq.nextval, 'ijg', 9456345678); 
+select * from emp;
+
+truncate table emp;
+select * from emp;
+drop sequence emp_sq;
+create sequence emp_sq start with 1 increment by 1;
+insert into emp values (emp_sq.nextval, 'x3', 4567892314);
+insert into emp values (emp_sq.nextval, 'x4', 2345233456);
+insert into emp values (emp_sq.nextval, 'x5', 7685431254);
+insert into emp values (emp_sq.nextval, 'x6', 5647382910);
+insert into emp values (emp_sq.nextval, 'x7', 3425167089);
+insert into emp values (emp_sq.nextval, 'x8', 1213141516);
+insert into emp values (emp_sq.nextval, 'x9', 4532527675);
+
+
+
+Add a new column PINCODE with not null constraints to the above existing table.  
+alter table emp add pincode int not null;
+
+insert into emp (emp_id, name, mobile, PINCODE) values (emp_sq.nextval, 'abc', 9456687534, 340034); 
+insert into emp (emp_id, name, mobile,  PINCODE) values (emp_sq.nextval, 'arc', 9456347984, 343334); 
+insert into emp (emp_id, name, mobile, PINCODE) values (emp_sq.nextval, 'erc', 9456347344, 332345); 
+insert into emp (emp_id, name, mobile, PINCODE) values (emp_sq.nextval, 'tyv', 9456346544, 346734); 
+insert into emp (emp_id, name, mobile, PINCODE) values (emp_sq.nextval, 'bnv', 9456376544, 347809); 
+insert into emp (emp_id, name, mobile, PINCODE) values (emp_sq.nextval, 'cds', 9456334567, 347878); 
+insert into emp (emp_id, name, mobile, PINCODE) values (emp_sq.nextval, 'edc', 1234547534, 123454); 
+insert into emp (emp_id, name, mobile, PINCODE) values (emp_sq.nextval, 'tgb', 9678907533, 234312); 
+insert into emp (emp_id, name, mobile, PINCODE) values (emp_sq.nextval, 'ijb', 9434567894, 234375); 
+insert into emp (emp_id, name, mobile, PINCODE) values (emp_sq.nextval, 'ijg', 9456345678, 345534); 
+SQL> select * from emp;
+
+    EMP_ID NAME                     MODILE     MOBILE    PINCODE
+---------- -------------------- ---------- ---------- ----------
+         1 abc                             9456687534     340034
+         2 arc                             9456347984     343334
+         3 erc                             9456347344     332345
+         4 tyv                             9456346544     346734
+         5 bnv                             9456376544     347809
+         6 cds                             9456334567     347878
+         7 edc                             1234547534     123454
+         8 tgb                             9678907533     234312
+         9 ijb                             9434567894     234375
+        10 ijg                             9456345678     345534
